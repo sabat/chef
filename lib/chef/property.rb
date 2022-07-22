@@ -424,7 +424,7 @@ class Chef
         end
       end
 
-      if value.nil? && required?(resource_action(action))
+      if value.nil? && required?(resource_action(resource))
         raise Chef::Exceptions::ValidationFailed, "#{name} is a required property"
       else
         value
@@ -453,7 +453,7 @@ class Chef
         Chef.deprecated(:property, options[:deprecated])
       end
 
-      if value.nil? && required?(resource_action(action))
+      if value.nil? && required?(resource_action(resource))
         raise Chef::Exceptions::ValidationFailed, "#{name} is a required property"
       else
         value
