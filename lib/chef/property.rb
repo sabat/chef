@@ -767,6 +767,7 @@ class Chef
       visitor.call(value)
     end
 
+    # action from resource, if available
     def resource_action(resource)
       resource.action if resource.respond_to?(:action)
     end
