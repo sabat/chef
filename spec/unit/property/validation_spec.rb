@@ -607,7 +607,7 @@ describe "Chef::Resource.property validation" do
         end
 
         it "retrieval succeeds if x is not set when resource uses the doit2 action" do
-          expect { resource.x }.not_to raise_error
+          expect { resource.x }.not_to raise_error 
         end
 
         it "succeeds with set to nil when resource uses the doit2 action" do
